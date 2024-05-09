@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Convert Images to PDF{% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-8">
+                <h1>Convert Images to PDF</h1>
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="images">Select multiple images:</label>
+                        <input type="file" name="images" class="form-control-file" id="images" multiple accept="image/*">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Convert to PDF</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

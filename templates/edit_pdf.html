@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Edit PDF{% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-8">
+                <h1>Edit Your PDF</h1>
+                
+                <!-- Buttons for PDF editing actions -->
+                <div class="mt-4">
+                    <h3>PDF Editing Actions</h3>
+                    <a href="{% url 'merge_pdf' %}" class="btn btn-secondary">Merge PDFs</a>
+                    <a href="{% url 'split_pdf' %}" class="btn btn-secondary">Split PDF</a>
+                    <a href="{% url 'rotate_pdf' %}" class="btn btn-secondary">Rotate PDF</a>
+                    <a href="{% url 'convert_pdf_to_images' %}" class="btn btn-secondary">PDF to Image</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

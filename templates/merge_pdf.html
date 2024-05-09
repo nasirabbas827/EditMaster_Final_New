@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Merge PDFs{% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-8">
+                <h1>Merge PDFs</h1>
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <h3>Select PDF files to merge:</h3>
+                    <input type="file" name="pdf_files" accept=".pdf" multiple>
+                    <button type="submit" class="btn btn-primary">Merge PDFs</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

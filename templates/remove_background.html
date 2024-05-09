@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Remove Background{% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-8">
+                <h1>Remove Background from Image</h1>
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="image">Select an image:</label>
+                        <input type="file" name="image" class="form-control-file" id="image" accept="image/*">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Remove Background</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

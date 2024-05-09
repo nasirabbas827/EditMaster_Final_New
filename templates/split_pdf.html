@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Split PDF{% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-8">
+                <h1>Split PDF</h1>
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <h3>Select a PDF file to split:</h3>
+                    <input type="file" name="pdf" accept=".pdf">
+                    <button type="submit" class="btn btn-primary">Split PDF</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

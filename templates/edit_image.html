@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Edit Image{% endblock %}
+
+
+
+{% block content %}
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Edit Your Image</h1>
+                <div class="btn-group" role="group" aria-label="Image Editing Options">
+                    <a href="{% url 'convert_images_to_pdf' %}" class="m-2 btn btn-info"><i class="fas fa-file-pdf"></i> Convert To PDF</a>
+                    <a href="{% url 'remove_background' %}" class="m-2 btn btn-warning"><i class="fas fa-eraser"></i> Remove Background</a>
+                    <a href="{% url 'image_editor' %}" class="m-2 btn btn-success"><i class="fas fa-edit"></i> Edit Image Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
